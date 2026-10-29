@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore a sample two-wheeler spare parts catalogue and enquire about the parts you need.">
+  <title>My Spare Parts Shop | Two-wheeler spare parts</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topbar">TWO WHEELS. EVERYDAY POSSIBILITIES. <span>Motorcycle & scooter spare parts</span></div>
+  <header class="header">
+    <a class="logo" href="#home" aria-label="My Spare Parts Shop home"><span class="logo-icon" aria-hidden="true">M<span>↗</span></span><span>My Spare Parts Shop<small>TWO-WHEELER PARTS & ACCESSORIES</small></span></a>
+    <button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu ☰</button>
+    <nav id="navigation" aria-label="Main navigation"><a href="#home">Home</a><a href="#catalogue">Find parts</a><a href="#brands">Brands</a><a href="#contact">Contact</a></nav>
+    <button class="button header-enquiry" data-enquiry>Enquire on WhatsApp <span aria-hidden="true">↗</span></button>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content"><p class="eyebrow"><span></span> FOR THE RIDE AHEAD</p><h1>Find the Right <span>Spare Parts</span> for Your Bike</h1><p class="hero-description">Give your everyday ride the attention it deserves. Explore spare parts for motorcycles and scooters, and let’s find what you need.</p><a href="#catalogue" class="button orange">Explore spare parts <span aria-hidden="true">↗</span></a><div class="hero-caption">BRAKES <b>·</b> FILTERS <b>·</b> CLUTCH & MORE</div></div>
+      <div class="hero-art" role="img" aria-label="Decorative wheel illustration, not a product photograph"><div class="art-grid"></div><span class="art-label">BUILT AROUND YOUR RIDE</span><div class="wheel"><div class="wheel-inner"><div class="hub"></div></div></div><div class="art-card"><span class="orange-dot"></span> THE RIGHT PART STARTS<br><strong>with the right conversation.</strong></div><span class="art-number">01 / EVERYDAY ESSENTIALS</span></div>
+    </section>
+    <div class="benefits"><div><span aria-hidden="true">⌕</span><p>Find your essentials<small>A simple, searchable catalogue</small></p></div><div><span aria-hidden="true">◎</span><p>Check before you choose<small>Confirm fitment with the shop</small></p></div><div><span aria-hidden="true">↗</span><p>Ask us on WhatsApp<small>Share your model and part details</small></p></div></div>
+    <section id="brands" class="brands section"><p class="eyebrow">MOTORCYCLES & SCOOTERS</p><div class="section-title"><h2>Your brand. Your ride.</h2><p>Select a brand to explore sample catalogue entries.</p></div><div id="brand-buttons" class="brand-buttons" aria-label="Filter catalogue by brand"></div><p class="fine-print">Brand names are for identification only. Sample entries do not establish vehicle compatibility or brand affiliation.</p></section>
+    <section id="catalogue" class="catalogue section"><div class="section-title"><div><p class="eyebrow">THE PARTS COUNTER, ONLINE</p><h2>Find your next part.</h2></div><span class="catalogue-tag">DEMO / UNVERIFIED</span></div><form id="search-form" role="search"><label class="sr-only" for="search">Search spare parts</label><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search by product name or code…"><button class="button" type="submit">Search <span aria-hidden="true">→</span></button></form>
+      <div class="catalogue-layout"><aside class="filters" aria-label="Catalogue filters"><div class="filter-heading"><h3>Refine your search</h3><button id="reset" class="text-button" type="button">Reset</button></div><label for="brand">Manufacturer (demo vehicle grouping)</label><select id="brand"><option value="">All manufacturers</option></select><label for="model">Bike / scooter model</label><select id="model"><option value="">All models</option></select><label for="year">Manufacturing year</label><select id="year"><option value="">Select year (optional)</option></select><p class="filter-note">DEMO / UNVERIFIED: manufacturer tags are sample groupings, not part manufacturers. Model and year describe your enquiry only; they do not confirm fitment or model production dates.</p><label for="category">Product category</label><select id="category"><option value="">All categories</option></select><div class="help-box"><span aria-hidden="true">↗</span><h3>Not sure which part?</h3><p>Share your vehicle model, year and a photo of the old part.</p><button class="text-button" data-enquiry type="button">Let’s talk on WhatsApp →</button></div></aside><div><div class="results-heading"><p id="result-count" role="status" aria-live="polite"></p><span>All records DEMO / UNVERIFIED</span></div><p id="vehicle-context" class="vehicle-context" role="status" aria-live="polite"></p><div id="products" class="products"></div><div id="empty" class="empty" hidden><h3>No sample parts found</h3><p>Try a different search or reset your filters.</p><button class="button" id="empty-reset">Reset filters</button></div></div></div><p class="sample-notice"><strong>DEMO / UNVERIFIED catalogue:</strong> No item is confirmed compatible with any model or year. Demo product codes are not real manufacturer part numbers. All products and brand labels are sample data. Images are placeholders. Prices, stock, manufacturers and vehicle compatibility must be confirmed with the shop before purchase.</p>
+    </section>
+    <section id="contact" class="contact section"><div><p class="eyebrow">LET’S FIND WHAT YOU NEED</p><h2>A little help.<br>A smoother ride.</h2><p>Tell us your brand, model, year and the part you’re looking for. Confirm the exact specifications before ordering.</p></div><div class="contact-action"><button class="button orange" data-enquiry>Enquire on WhatsApp ↗</button><p>Shop owner: add your WhatsApp number in script.js.<br>Address and opening hours: to be added.</p></div></section>
+  </main>
+  <footer><a href="#home">My Spare Parts Shop</a><p>Two-wheeler spare parts · India</p><span>Demo website · Temporary shop name</span></footer>
+  <dialog id="setup-dialog"><button class="dialog-close" aria-label="Close dialog">×</button><p class="eyebrow">WHATSAPP SETUP</p><h2>Let’s connect your shop.</h2><p>This demo does not have a shop phone number yet. In <strong>script.js</strong>, replace the empty <strong>WHATSAPP_NUMBER</strong> value with your WhatsApp number, including country code (91 for India), using digits only.</p><p id="enquiry-preview"></p><button class="button dialog-done">Got it</button></dialog>
+  <dialog id="product-dialog" aria-labelledby="detail-title" aria-describedby="detail-warning">
+    <button class="dialog-close" id="detail-close" aria-label="Close product details">×</button>
+    <p class="demo-badge">DEMO / UNVERIFIED</p>
+    <h2 id="detail-title"></h2>
+    <div class="detail-placeholder" role="img" aria-label="Demo image placeholder, no authentic product photograph">IMAGE PLACEHOLDER · DEMO</div>
+    <p id="detail-description"></p>
+    <dl id="detail-specs"></dl>
+    <p id="detail-warning" class="detail-warning">No confirmed compatibility with any vehicle model or year. Product manufacturer, specifications, stock and price are unverified. Confirm with reliable manufacturer documentation before ordering.</p>
+    <button id="detail-enquiry" class="button orange" type="button">Enquire on WhatsApp ↗</button>
+  </dialog>
+  <noscript><p class="sample-notice">Please enable JavaScript to view sample products and use search, filters and enquiry buttons.</p></noscript>
+</body>
+</html>
+
+
