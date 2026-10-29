@@ -1,0 +1,6 @@
+# Upload only the static website; keep local outputs and Git files private.
+*
+!index.html
+!style.css
+!script.js
+!products.js
